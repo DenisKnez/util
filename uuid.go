@@ -8,10 +8,10 @@ type UUID struct {
 	uuid *uuid.UUID
 }
 
-func (u *UUID) GetNewUUID() uuid.UUID {
+func (u *UUID) GetNewUUID() (uuid.UUID, error) {
 	if u.uuid != nil {
-		return *u.uuid
+		return *u.uuid, nil
 	}
 
-	return *u.uuid
+	return uuid.NewV4()
 }

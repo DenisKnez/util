@@ -12,7 +12,7 @@ type Util struct {
 	stringUtil *String
 }
 
-//New
+// New
 // now take the current time or nil
 // uuid takes a random uuid or nil
 func New(now *time.Time, uuid *uuid.UUID) *Util {
